@@ -1,0 +1,17 @@
+name: DimensionLevels
+version: '${project.version}'
+main: com.ilucah.dimensionlevels.DimensionLevels
+api-version: 1.13
+prefix: <-[DimensionLevels-iLucaH]->
+softdepend: [ SuperMobCoins, Vault ]
+authors: [ iLucaH ]
+description: custom level plugin made by the one and only iLucaH
+website: ilucah.com
+
+commands:
+  level:
+    description: See your own level
+  levelup:
+    description: Level up your level
+  levels:
+    description: See all available levels and their information

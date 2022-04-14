@@ -1,0 +1,109 @@
+levels:
+  1:
+    experience-required: 10
+    messages:
+      enabled: true
+      messages:
+        - '<RAINBOW1>&lYOU LEVELED UP TO LEVEL 1!</RAINBOW>'
+    sound:
+      enabled: true
+      sound: 'ENTITY_PLAYER_LEVELUP'
+    title:
+      enabled: true
+      line1: '<RAINBOW1>&lYOU LEVELED UP</RAINBOW>'
+      line2: '<RAINBOW25>New Level: 1</RAINBOW>'
+    commands:
+      - 'broadcast {player} leveled up to level {level}!'
+    particles:
+      enabled: true
+      particle: 'FLAME'
+    requirements:
+      # in seconds
+      play-time: 180
+      blocks-mined:
+        - 'STONE 10'
+      mobs-killed:
+        - 'COW 10'
+      coins: 0
+      money: 0
+  2:
+    experience-required: 20
+    messages:
+      enabled: true
+      messages:
+        - '<RAINBOW1>&lYOU LEVELED UP TO LEVEL 2!</RAINBOW>'
+    sound:
+      enabled: true
+      sound: 'ENTITY_PLAYER_LEVELUP'
+    title:
+      enabled: true
+      line1: '<RAINBOW1>&lYOU LEVELED UP</RAINBOW>'
+      line2: '<RAINBOW25>New Level: 2</RAINBOW>'
+    commands:
+      - 'broadcast {player} leveled up to level 2!'
+    particles:
+      enabled: true
+      particle: 'FLAME'
+    requirements:
+      # in seconds
+      play-time: 180
+      blocks-mined:
+        - 'STONE 10'
+      mobs-killed:
+        - 'COW 10'
+      coins: 0
+      money: 0
+  3:
+    experience-required: 30
+    messages:
+      enabled: true
+      messages:
+        - '<RAINBOW1>&lYOU LEVELED UP TO LEVEL 3!</RAINBOW>'
+    sound:
+      enabled: true
+      sound: 'ENTITY_PLAYER_LEVELUP'
+    title:
+      enabled: true
+      line1: '<RAINBOW1>&lYOU LEVELED UP</RAINBOW>'
+      line2: '<RAINBOW25>New Level: 3</RAINBOW>'
+    commands:
+      - 'broadcast {player} leveled up to level 3!'
+    particles:
+      enabled: true
+      particle: 'FLAME'
+    requirements:
+      # in seconds
+      play-time: 180
+      blocks-mined:
+        - 'STONE 10'
+      mobs-killed:
+        - 'COW 10'
+      coins: 0
+      money: 0
+  4:
+    experience-required: 40
+    messages:
+      enabled: true
+      messages:
+        - '<RAINBOW1>&lYOU LEVELED UP TO LEVEL 4!</RAINBOW>'
+    sound:
+      enabled: true
+      sound: 'ENTITY_PLAYER_LEVELUP'
+    title:
+      enabled: true
+      line1: '<RAINBOW1>&lYOU LEVELED UP</RAINBOW>'
+      line2: '<RAINBOW25>New Level: 4</RAINBOW>'
+    commands:
+      - 'broadcast {player} leveled up to level 4!'
+    particles:
+      enabled: true
+      particle: 'FLAME'
+    requirements:
+      # in seconds
+      play-time: 180
+      blocks-mined:
+        - 'STONE 10'
+      mobs-killed:
+        - 'COW 10'
+      coins: 0
+      money: 0

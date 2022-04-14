@@ -1,0 +1,9 @@
+auto-levelup: true
+
+economy-dependencies:
+  money:
+    vault: false
+  coin:
+    super-mob-coins: false
+
+particle-support: true

@@ -1,0 +1,40 @@
+player-levels:
+  - '<RAINBOW1>&l&n&m|--------------------|</RAINBOW>'
+  - '&2Current Level: &a{level}'
+  - '&2Experience: &a{experience}'
+  - '&2Multiplier: &a{multi}'
+  - '<RAINBOW1>&l&n&m|--------------------|</RAINBOW>'
+
+# Sent when they are already max level and try to levelup
+max-level:
+  - '&cYou are already max level!'
+
+# When they try to level up but are broke asf
+not-enough-experience:
+  - '&cYou do not have enough experience to level up!'
+  - '&cYour experience: &4{experience}&c/&4{required-experience}'
+
+not-enough-mobs-killed:
+  - '&cYou have not killed enough mobs (/levels to see requirements).'
+
+not-enough-blocks-broken:
+  - '&cYou have not broken enough blocks (/levels to see requirements).'
+
+not-enough-play-time:
+  - '&cYou have not played long enough to level up (/levels to see requirements).'
+
+not-enough-coins:
+  - '&cYou do not have enough coins to level up (/levels to see requirements).'
+
+not-enough-money:
+  - '&cYou do not have enough money to level up (/levels to see requirements).'
+
+# When they /levelup and don't have permission.
+no-levelup-permission:
+  - '&cYou do not have permission to level up!'
+
+enabled-effects:
+  - '&aYou toggled your effects, on!'
+
+disabled-effects:
+  - '&cYou toggled your effects, off!'
