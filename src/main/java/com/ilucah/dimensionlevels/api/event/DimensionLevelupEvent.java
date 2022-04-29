@@ -1,6 +1,6 @@
 package com.ilucah.dimensionlevels.api.event;
 
-import com.ilucah.dimensionlevels.levels.model.DimensionLevel;
+import com.ilucah.dimensionlevels.levels.obj.DimensionLevel;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;

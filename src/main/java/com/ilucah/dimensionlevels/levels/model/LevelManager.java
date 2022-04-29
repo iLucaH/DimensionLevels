@@ -1,8 +1,8 @@
-package com.ilucah.dimensionlevels.levels;
+package com.ilucah.dimensionlevels.levels.model;
 
 import com.ilucah.dimensionlevels.DimensionLevels;
-import com.ilucah.dimensionlevels.levels.model.DimensionLevel;
-import com.ilucah.dimensionlevels.levels.model.LevelRequirement;
+import com.ilucah.dimensionlevels.levels.obj.DimensionLevel;
+import com.ilucah.dimensionlevels.levels.obj.LevelRequirement;
 import com.ilucah.dimensionlevels.utils.color.IridiumColorAPI;
 import com.ilucah.dimensionlevels.utils.xutils.XSound;
 import org.bukkit.Sound;

@@ -2,12 +2,11 @@ package com.ilucah.dimensionlevels.commands;
 
 import com.ilucah.dimensionlevels.DimensionLevels;
 import com.ilucah.dimensionlevels.api.UserData;
-import com.ilucah.dimensionlevels.levels.model.DimensionLevel;
+import com.ilucah.dimensionlevels.levels.obj.DimensionLevel;
 import com.ilucah.dimensionlevels.particle.ParticleAnimation;
 import com.ilucah.dimensionlevels.utils.color.IridiumColorAPI;
 import com.ilucah.dimensionlevels.utils.xutils.NMS;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

@@ -1,7 +1,7 @@
-package com.ilucah.dimensionlevels.mob;
+package com.ilucah.dimensionlevels.mob.model;
 
 import com.ilucah.dimensionlevels.DimensionLevels;
-import com.ilucah.dimensionlevels.mob.model.DimensionMob;
+import com.ilucah.dimensionlevels.mob.obj.DimensionMob;
 import com.ilucah.dimensionlevels.utils.color.IridiumColorAPI;
 import com.ilucah.dimensionlevels.utils.xutils.XSound;
 import org.bukkit.Sound;

@@ -1,4 +1,4 @@
-package com.ilucah.dimensionlevels.mob.model;
+package com.ilucah.dimensionlevels.mob.obj;
 
 import org.bukkit.Sound;
 import org.bukkit.entity.EntityType;

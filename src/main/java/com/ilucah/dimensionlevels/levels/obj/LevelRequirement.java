@@ -1,4 +1,4 @@
-package com.ilucah.dimensionlevels.levels.model;
+package com.ilucah.dimensionlevels.levels.obj;
 
 import com.ilucah.dimensionlevels.utils.xutils.XMaterial;
 import org.bukkit.Material;

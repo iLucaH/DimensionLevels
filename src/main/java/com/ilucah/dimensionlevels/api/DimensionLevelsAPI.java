@@ -1,8 +1,8 @@
 package com.ilucah.dimensionlevels.api;
 
 import com.ilucah.dimensionlevels.DimensionLevels;
-import com.ilucah.dimensionlevels.levels.model.DimensionLevel;
-import com.ilucah.dimensionlevels.mob.model.DimensionMob;
+import com.ilucah.dimensionlevels.levels.obj.DimensionLevel;
+import com.ilucah.dimensionlevels.mob.obj.DimensionMob;
 import org.bukkit.entity.EntityType;
 
 import java.util.Collection;

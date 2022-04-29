@@ -1,4 +1,4 @@
-package com.ilucah.dimensionlevels.levels.model;
+package com.ilucah.dimensionlevels.levels.obj;
 
 import org.bukkit.Sound;
 import xyz.xenondevs.particle.ParticleEffect;

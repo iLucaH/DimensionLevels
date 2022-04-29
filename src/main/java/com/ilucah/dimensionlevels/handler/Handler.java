@@ -2,9 +2,9 @@ package com.ilucah.dimensionlevels.handler;
 
 import com.ilucah.dimensionlevels.DimensionLevels;
 import com.ilucah.dimensionlevels.economy.EconomyService;
-import com.ilucah.dimensionlevels.levels.LevelManager;
+import com.ilucah.dimensionlevels.levels.model.LevelManager;
 import com.ilucah.dimensionlevels.menu.MenuManager;
-import com.ilucah.dimensionlevels.mob.MobManager;
+import com.ilucah.dimensionlevels.mob.model.MobManager;
 import com.ilucah.dimensionlevels.storage.PlayerDataStorage;
 
 public class Handler {
