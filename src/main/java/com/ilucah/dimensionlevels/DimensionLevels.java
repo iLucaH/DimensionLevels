@@ -12,8 +12,6 @@ import com.ilucah.dimensionlevels.placeholder.Placeholders;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import java.io.IOException;
-
 public final class DimensionLevels extends JavaPlugin {
 
     private static DimensionLevels instance;
@@ -28,7 +26,6 @@ public final class DimensionLevels extends JavaPlugin {
         instance = this;
         fileModule = new FileModule(this);
         handler = new Handler(this);
-        handler.getStorage().load();
 
         getServer().getPluginManager().registerEvents(new CreateDefaultListener(this), this);
         getServer().getPluginManager().registerEvents(new MobListener(this), this);
@@ -50,10 +47,18 @@ public final class DimensionLevels extends JavaPlugin {
     @Override
     public void onDisable() {
         try {
-            handler.getStorage().save();
+            handler.getStorage().saveAll();
             getLogger().warning("Saved data.");
-        } catch (IOException e) {
+        } catch (Exception e) {
             getLogger().warning("Failed to save data.");
+            e.printStackTrace();
+        }
+        try {
+            handler.getStorage().unloadAll();
+            getLogger().warning("Unloaded data.");
+        } catch (Exception e) {
+            getLogger().warning("Failed to unload data.");
+            e.printStackTrace();
         }
     }
 
@@ -62,9 +67,9 @@ public final class DimensionLevels extends JavaPlugin {
             @Override
             public void run() {
                 try {
-                    handler.getStorage().save();
+                    handler.getStorage().saveAll();
                     System.out.println("Saved data file - DimensionLevels");
-                } catch (IOException e) {
+                } catch (Exception e) {
                     System.out.println("Failed to save data file - DimensionLevels. Cancelling future save tasks.");
                     e.printStackTrace();
                     cancel();

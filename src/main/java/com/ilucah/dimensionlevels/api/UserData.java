@@ -103,6 +103,6 @@ public class UserData {
     }
 
     public SerializableUserData craftSerializableUserData() {
-        return new SerializableUserData(uuid.toString(), level, experience, multiplier);
+        return new SerializableUserData(uuid.toString(), player.getName(), level, experience, multiplier);
     }
 }

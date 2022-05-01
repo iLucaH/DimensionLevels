@@ -17,11 +17,11 @@ public class CreateDefaultListener implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         if (!plugin.getHandler().getStorage().hasData(event.getPlayer().getUniqueId()))
-            plugin.getHandler().getStorage().createDefaults(event.getPlayer().getUniqueId());
+            plugin.getHandler().getStorage().load(event.getPlayer().getUniqueId());
     }
 
     @EventHandler
     public void onLeave(PlayerQuitEvent event) {
-        // save defaults
+        plugin.getHandler().getStorage().save(event.getPlayer().getUniqueId());
     }
 }
