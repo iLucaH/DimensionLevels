@@ -1,5 +1,6 @@
 package com.ilucah.dimensionlevels.api;
 
+import com.ilucah.dimensionlevels.storage.SerializableUserData;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
@@ -99,5 +100,9 @@ public class UserData {
 
     public boolean hasToggledEffects() {
         return toggledEffects;
+    }
+
+    public SerializableUserData craftSerializableUserData() {
+        return new SerializableUserData(uuid.toString(), level, experience, multiplier);
     }
 }
