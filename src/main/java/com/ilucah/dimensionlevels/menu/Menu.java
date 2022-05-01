@@ -18,7 +18,7 @@ public class Menu implements Listener {
     private int startingPage, nextPageSlot, previousPageSlot;
 
     public Menu(Plugin plugin, int size, String title, ItemStack fillerItem, int pages, int startingPage, int previousInvSlot, int nexInvSlot, ItemStack previousInvItem, ItemStack nexInvItem) {
-        this.pages = new HashMap<Integer, DimensionalInv>();
+        this.pages = new HashMap<>();
         this.startingPage = startingPage;
         this.nextPageSlot = nexInvSlot;
         this.previousPageSlot = previousInvSlot;
@@ -39,7 +39,7 @@ public class Menu implements Listener {
     public void onClick(InventoryClickEvent event) {
         if (event.getCurrentItem() == null || event.getCurrentItem().getType() == Material.AIR)
             return;
-        Optional<DimensionalInv> inv = pages.values().stream().filter(i -> event.getInventory() == i.getInventory()).findFirst();
+        Optional<DimensionalInv> inv = pages.values().stream().filter(i -> event.getInventory().equals(i.getInventory())).findFirst();
         if (!inv.isPresent())
             return;
         event.setCancelled(true);
