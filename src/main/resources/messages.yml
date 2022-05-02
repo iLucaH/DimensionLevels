@@ -1,9 +1,9 @@
 player-levels:
-  - '<RAINBOW1>&l&n&m|--------------------|</RAINBOW>'
+  - '<RAINBOW1>&l&n&m|------------------|</RAINBOW>'
   - '&2Current Level: &a{level}'
   - '&2Experience: &a{experience}'
   - '&2Multiplier: &a{multi}'
-  - '<RAINBOW1>&l&n&m|--------------------|</RAINBOW>'
+  - '<RAINBOW1>&l&n&m|------------------|</RAINBOW>'
 
 # Sent when they are already max level and try to levelup
 max-level:

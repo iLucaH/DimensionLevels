@@ -6,7 +6,6 @@ prefix: <-[DimensionLevels-iLucaH]->
 softdepend: [ SuperMobCoins, Vault ]
 authors: [ iLucaH ]
 description: custom level plugin made by the one and only iLucaH
-website: ilucah.com
 
 commands:
   level:
