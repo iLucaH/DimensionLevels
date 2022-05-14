@@ -2,7 +2,6 @@ package com.ilucah.dimensionlevels.storage;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
-import org.bukkit.plugin.Plugin;
 
 import java.io.File;
 import java.sql.PreparedStatement;
@@ -73,6 +72,7 @@ public class SQLiteConnection {
     }
 
     public void setUserDataInDB(SerializableUserData userData) {
+        System.out.println("Setting in db");
         try {
             PreparedStatement ps = ds.getConnection().prepareStatement("UPDATE userdata SET UD=? WHERE UUID=?");
             ps.setString(1, userData.serialize());
@@ -85,17 +85,19 @@ public class SQLiteConnection {
 
     public Optional<SerializableUserData> getUserDataFromDB(String uuid) {
         try {
-            PreparedStatement ps = ds.getConnection().prepareStatement("SELECT UD FROM userdata WHERE UUID=?");
-            ps.setString(1, uuid);
+            PreparedStatement ps = ds.getConnection().prepareStatement("SELECT UD FROM userdata WHERE UUID=" + uuid);
+            //ps.setString(1, uuid);
             ResultSet rs = ps.executeQuery();
             String query;
             if (rs.next()) {
                 query = rs.getString("UD");
+                System.out.println(query);
                 return Optional.ofNullable(SerializableUserData.fromString(query));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        System.out.println("getting null");
         return Optional.ofNullable(null);
     }
 

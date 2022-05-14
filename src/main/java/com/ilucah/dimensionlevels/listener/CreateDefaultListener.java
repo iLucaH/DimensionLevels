@@ -22,6 +22,6 @@ public class CreateDefaultListener implements Listener {
 
     @EventHandler
     public void onLeave(PlayerQuitEvent event) {
-        plugin.getHandler().getStorage().save(event.getPlayer().getUniqueId());
+        plugin.getHandler().getStorage().unload(event.getPlayer().getUniqueId());
     }
 }

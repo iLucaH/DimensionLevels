@@ -9,6 +9,7 @@ import java.util.UUID;
 public class SerializableUserData implements Serializable {
 
     public static SerializableUserData fromString(String string) {
+        System.out.println(string);
         return new Gson().fromJson(string, SerializableUserData.class);
     }
 

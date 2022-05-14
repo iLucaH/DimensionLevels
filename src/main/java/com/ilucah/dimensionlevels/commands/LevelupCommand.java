@@ -94,7 +94,7 @@ public class LevelupCommand implements CommandExecutor {
         }
         if (level.isSendingTitle()) {
             try {
-                player.sendTitle(level.getTitle()[0], level.getTitle()[1], 10, 35, 10);
+                player.sendTitle(level.getTitle()[0], level.getTitle()[1]);
             } catch (NoSuchMethodError e) {
                 NMS.sendTitle(player, 10, 35, 10, level.getTitle()[0], level.getTitle()[1]);
             }

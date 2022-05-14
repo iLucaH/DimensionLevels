@@ -15,24 +15,28 @@ public class PlayerDataStorage {
 
     private final SQLiteConnection dataSource;
 
-    private ConcurrentHashMap<UUID, UserData> dataMap;
+    private ConcurrentHashMap<UUID, UserData> dataMap = new ConcurrentHashMap<>();
 
     public PlayerDataStorage(DimensionLevels plugin) {
         dataSource = new SQLiteConnection(new File(plugin.getDataFolder(), "data.db"));
     }
 
     public void load(UUID uuid) {
+        System.out.println("load");
         if (dataMap.containsKey(uuid))
             return; // already loaded
         Optional<SerializableUserData> userData = dataSource.getUserDataFromDB(uuid);
         if (userData.isPresent()) {
+            System.out.println("a");
             dataMap.put(uuid, userData.get().craftUserData());
         } else {
+            System.out.println("b");
             dataMap.put(uuid, new UserData(uuid));
         }
     }
 
     public void unload(UUID uuid) {
+        System.out.println("unload");
         if (!dataMap.containsKey(uuid))
             return; // already unloaded or doesn't exist
         save(uuid);
@@ -43,6 +47,7 @@ public class PlayerDataStorage {
         for (Player player : Bukkit.getOnlinePlayers()) {
             unload(player.getUniqueId());
         }
+        dataMap.clear();
     }
 
     public void saveAll() {
@@ -52,7 +57,10 @@ public class PlayerDataStorage {
     }
 
     public void save(UUID uuid) {
-        dataSource.setUserDataInDB(dataMap.get(uuid).craftSerializableUserData());
+        if (!dataSource.exists(uuid.toString()))
+            dataSource.submitUserData(dataMap.get(uuid).craftSerializableUserData());
+        else
+            dataSource.setUserDataInDB(dataMap.get(uuid).craftSerializableUserData());
     }
 
     public ConcurrentHashMap<UUID, UserData> getDataMap() {
